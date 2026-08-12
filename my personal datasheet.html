@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>my personal datasheet</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 14px;
+            margin: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            vertical-align: middle;
+        }
+
+        .section-header {
+            text-align: left;
+            background-color: #f2f2f2;
+            font-size: 16px;
+        }
+
+        .align-top {
+            vertical-align: top;
+        }
+
+        .no-border-table th, 
+        .no-border-table td {
+            border: none;
+            padding: 2px 0;
+        }
+
+        input[type="text"],
+        input[type="date"],
+        input[type="number"],
+        input[type="email"],
+        input[type="tel"] {
+            width: 95%;
+            padding: 4px;
+            box-sizing: border-box;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 12px;
+        }
+        
+        .radio-group label {
+            font-weight: normal;
+        }
+    </style>
+</head>
+<body>
+
+    <table>
+        <tr>
+            <td colspan="4" style="text-align: center; border: none; padding-bottom: 20px;">
+                <b style="font-size: 20px;">PERSONAL DATA SHEET</b><br>
+            </td>
+        </tr>
+
+        <tr>
+            <th colspan="4" class="section-header">I. PERSONAL INFORMATION</th>
+        </tr>
+        <tr>
+            <td><label for="surname">1. SURNAME</label></td>
+            <td colspan="3"><input type="text" id="surname" name="surname"></td>
+        </tr>
+        <tr>
+            <td><label for="firstname">2. FIRST NAME</label></td>
+            <td><input type="text" id="firstname" name="firstname"></td>
+            <td><label for="name_extension">NAME EXTENSION (JR., SR.)</label></td>
+            <td><input type="text" id="name_extension" name="name_extension"></td>
+        </tr>
+        <tr>
+            <td><label for="middlename">MIDDLE NAME</label></td>
+            <td colspan="3"><input type="text" id="middlename" name="middlename"></td>
+        </tr>
+        <tr>
+            <td><label for="dob">3. DATE OF BIRTH (dd/mm/yyyy)</label></td>
+            <td><input type="date" id="dob" name="dob"></td>
+            <td rowspan="3">
+                <label>16. CITIZENSHIP</label><br>
+                <input type="text"
+            </td>
+            <td rowspan="3" class="radio-group">
+                <input type="checkbox" id="cit_filipino" name="citizenship" value="Filipino">
+                <label for="cit_filipino">Filipino</label>
+                &nbsp;&nbsp;
+                <input type="checkbox" id="cit_dual" name="citizenship" value="Dual Citizenship">
+                <label for="cit_dual">Dual Citizenship</label><br><br>
+                
+                <input type="radio" id="cit_birth" name="dual_cit_type" value="by birth">
+                <label for="cit_birth">by birth</label>
+                &nbsp;&nbsp;
+                <input type="radio" id="cit_nat" name="dual_cit_type" value="by naturalization">
+                <label for="cit_nat">by naturalization</label><br><br>
+                
+                <label for="cit_country">Pls. indicate country:</label><br>
+                <input type="text" id="cit_country" name="cit_country">
+            </td>
+        </tr>
+        <tr>
+            <td><label for="pob">4. PLACE OF BIRTH</label></td>
+            <td><input type="text" id="pob" name="pob"></td>
+        </tr>
+        <tr>
+            <td><label for="sex">5. SEX AT BIRTH</label></td>
+            <td class="radio-group">
+                <input type="radio" id="sex_male" name="sex" value="Male">
+                <label for="sex_male">Male</label>
+                &nbsp;&nbsp;
+                <input type="radio" id="sex_female" name="sex" value="Female">
+                <label for="sex_female">Female</label>
+            </td>
+        </tr>
+        <tr>
+            <td><label>6. CIVIL STATUS</label></td>
+            <td class="radio-group">
+                <input type="radio" id="cs_single" name="civil_status" value="Single">
+                <label for="cs_single">Single</label>
+                &nbsp;&nbsp;
+                <input type="radio" id="cs_married" name="civil_status" value="Married">
+                <label for="cs_married">Married</label><br>
+                
+                <input type="radio" id="cs_widowed" name="civil_status" value="Widowed">
+                <label for="cs_widowed">Widowed</label>
+                &nbsp;&nbsp;
+                <input type="radio" id="cs_separated" name="civil_status" value="Separated">
+                <label for="cs_separated">Separated</label><br>
+                
+                <input type="radio" id="cs_other" name="civil_status" value="Other">
+                <label for="cs_other_text">Other/s:</label>
+                <input type="text" id="cs_other_text" name="civil_status_other" style="width: 50%;">
+            </td>
+            <td rowspan="6" class="align-top"><label>17. RESIDENTIAL ADDRESS</label>
+            <input type="text"></td>
+            <td class="align-top">
+                <table class="no-border-table">
+                    <tr><td><label for="res_house">House/Block/Lot No.:</label></td><td><input type="text" id="res_house" name="res_house"></td></tr>
+                    <tr><td><label for="res_street">Street:</label></td><td><input type="text" id="res_street" name="res_street"></td></tr>
+                    <tr><td><label for="res_subd">Subdivision/Village:</label></td><td><input type="text" id="res_subd" name="res_subd"></td></tr>
+                    <tr><td><label for="res_brgy">Barangay:</label></td><td><input type="text" id="res_brgy" name="res_brgy"></td></tr>
+                    <tr><td><label for="res_city">City/Municipality:</label></td><td><input type="text" id="res_city" name="res_city"></td></tr>
+                    <tr><td><label for="res_prov">Province:</label></td><td><input type="text" id="res_prov" name="res_prov"></td></tr>
+                    <tr><td><label for="res_zip">ZIP CODE:</label></td><td><input type="text" id="res_zip" name="res_zip" style="width: 50%;"></td></tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="height">7. HEIGHT (m)</label></td>
+            <td><input type="number" step="0.01" id="height" name="height"></td>
+        </tr>
+        <tr>
+            <td><label for="weight">8. WEIGHT (kg)</label></td>
+            <td><input type="number" step="0.1" id="weight" name="weight"></td>
+        </tr>
+        <tr>
+            <td><label for="blood_type">9. BLOOD TYPE</label></td>
+            <td><input type="text" id="blood_type" name="blood_type"></td>
+        </tr>
+        <tr>
+            <td><label for="umid">10. UMID ID NO.</label></td>
+            <td><input type="text" id="umid" name="umid"></td>
+        </tr>
+        <tr>
+            <td><label for="pagibig">11. PAG-IBIG ID NO.</label></td>
+            <td><input type="text" id="pagibig" name="pagibig"></td>
+        </tr>
+        <tr>
+            <td><label for="philhealth">12. PHILHEALTH NO.</label></td>
+            <td><input type="text" id="philhealth" name="philhealth"></td>
+            <td rowspan="6" class="align-top"><label>18. PERMANENT ADDRESS</label>
+            <input type="text"></td>
+            <td rowspan="6" class="align-top">
+                <table class="no-border-table">
+                    <tr><td><label for="perm_house">House/Block/Lot No.:</label></td><td><input type="text" id="perm_house" name="perm_house"></td></tr>
+                    <tr><td><label for="perm_street">Street:</label></td><td><input type="text" id="perm_street" name="perm_street"></td></tr>
+                    <tr><td><label for="perm_subd">Subdivision/Village:</label></td><td><input type="text" id="perm_subd" name="perm_subd"></td></tr>
+                    <tr><td><label for="perm_brgy">Barangay:</label></td><td><input type="text" id="perm_brgy" name="perm_brgy"></td></tr>
+                    <tr><td><label for="perm_city">City/Municipality:</label></td><td><input type="text" id="perm_city" name="perm_city"></td></tr>
+                    <tr><td><label for="perm_prov">Province:</label></td><td><input type="text" id="perm_prov" name="perm_prov"></td></tr>
+                    <tr><td><label for="perm_zip">ZIP CODE:</label></td><td><input type="text" id="perm_zip" name="perm_zip" style="width: 50%;"></td></tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="philsys">13. PhilSys Card Number:</label></td>
+            <td><input type="text" id="philsys" name="philsys"></td>
+        </tr>
+        <tr>
+            <td><label for="tin">14. TIN NO.</label></td>
+            <td><input type="text" id="tin" name="tin"></td>
+        </tr>
+        <tr>
+            <td><label for="agency_emp_no">15. AGENCY EMPLOYEE NO.</label></td>
+            <td><input type="text" id="agency_emp_no" name="agency_emp_no"></td>
+        </tr>
+        <tr>
+            <td><label for="tel_no">19. TELEPHONE NO.</label></td>
+            <td><input type="tel" id="tel_no" name="tel_no"></td>
+        </tr>
+        <tr>
+            <td><label for="mobile_no">20. MOBILE NO.</label></td>
+            <td><input type="tel" id="mobile_no" name="mobile_no"></td>
+        </tr>
+        <tr>
+            <td><label for="email">21. E-MAIL ADDRESS (if any)</label></td>
+            <td colspan="3"><input type="email" id="email" name="email"></td>
+        </tr>
+
+        <tr>
+            <th colspan="4" class="section-header">II. FAMILY BACKGROUND</th>
+        </tr>
+        <tr>
+            <td><label for="spouse_surname">22. SPOUSE'S SURNAME</label></td>
+            <td><input type="text" id="spouse_surname" name="spouse_surname"></td>
+            <td colspan="2" rowspan="11" class="align-top" style="padding: 0;">
+                <table style="margin-bottom: 0; border: none; height: 100%;">
+                    <tr>
+                        <th style="border-top: none; border-left: none;">23. NAME of CHILDREN (Write full name)</th>
+                        <th style="border-top: none; border-right: none;">DATE OF BIRTH (dd/mm/yyyy)</th>
+                    </tr>
+                    <tr><td style="border-left: none;"><input type="text" name="child_name_1"></td><td style="border-right: none;"><input type="date" name="child_dob_1"></td></tr>
+                    <tr><td style="border-left: none;"><input type="text" name="child_name_2"></td><td style="border-right: none;"><input type="date" name="child_dob_2"></td></tr>
+                    <tr><td style="border-left: none;"><input type="text" name="child_name_3"></td><td style="border-right: none;"><input type="date" name="child_dob_3"></td></tr>
+                    <tr><td style="border-left: none;"><input type="text" name="child_name_4"></td><td style="border-right: none;"><input type="date" name="child_dob_4"></td></tr>
+                    <tr><td style="border-left: none;"><input type="text" name="child_name_5"></td><td style="border-right: none;"><input type="date" name="child_dob_5"></td></tr>
+                    <tr><td style="border-left: none;"><input type="text" name="child_name_6"></td><td style="border-right: none;"><input type="date" name="child_dob_6"></td></tr>
+                    <tr><td style="border-left: none;"><input type="text" name="child_name_7"></td><td style="border-right: none;"><input type="date" name="child_dob_7"></td></tr>
+                    <tr><td style="border-left: none;"><input type="text" name="child_name_8"></td><td style="border-right: none;"><input type="date" name="child_dob_8"></td></tr>
+                    <tr><td style="border-left: none;"><input type="text" name="child_name_9"></td><td style="border-right: none;"><input type="date" name="child_dob_9"></td></tr>
+                    <tr><td style="border-left: none; border-bottom: none;"><input type="text" name="child_name_10"></td><td style="border-right: none; border-bottom: none;"><input type="date" name="child_dob_10"></td></tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td><label for="spouse_firstname">FIRST NAME</label></td>
+            <td><input type="text" id="spouse_firstname" name="spouse_firstname"></td>
+        </tr>
+        <tr>
+            <td><label for="spouse_middlename">MIDDLE NAME</label></td>
+            <td><input type="text" id="spouse_middlename" name="spouse_middlename"></td>
+        </tr>
+        <tr>
+            <td><label for="spouse_ext">NAME EXTENSION</label></td>
+            <td><input type="text" id="spouse_ext" name="spouse_ext"></td>
+        </tr>
+        <tr>
+            <td><label for="spouse_occ">OCCUPATION</label></td>
+            <td><input type="text" id="spouse_occ" name="spouse_occ"></td>
+        </tr>
+        <tr>
+            <td><label for="spouse_emp">EMPLOYER/BUSINESS NAME</label></td>
+            <td><input type="text" id="spouse_emp" name="spouse_emp"></td>
+        </tr>
+        <tr>
+            <td><label for="spouse_bus_addr">BUSINESS ADDRESS</label></td>
+            <td><input type="text" id="spouse_bus_addr" name="spouse_bus_addr"></td>
+        </tr>
+        <tr>
+            <td><label for="spouse_tel">TELEPHONE NO.</label></td>
+            <td><input type="tel" id="spouse_tel" name="spouse_tel"></td>
+        </tr>
+        <tr>
+            <td><label for="father_surname">24. FATHER'S SURNAME</label></td>
+            <td><input type="text" id="father_surname" name="father_surname"></td>
+        </tr>
+        <tr>
+            <td><label for="father_firstname">FIRST NAME</label></td>
+            <td><input type="text" id="father_firstname" name="father_firstname"></td>
+        </tr>
+        <tr>
+            <td><label for="father_middlename">MIDDLE NAME</label></td>
+            <td><input type="text" id="father_middlename" name="father_middlename"></td>
+        </tr>
+        <tr>
+            <td><label for="father_ext">NAME EXTENSION</label></td>
+            <td><input type="text" id="father_ext" name="father_ext"></td>
+            <td colspan="2" style="border: none;"></td>
+        </tr>
+        <tr>
+            <td><label>25. MOTHER'S MAIDEN NAME</label></td>
+            <td><input type="text" id="mother_maiden_full" name="mother_maiden_full" placeholder="Full Maiden Name"></td>
+            <td colspan="2" style="border: none;"></td>
+        </tr>
+        <tr>
+            <td><label for="mother_surname">SURNAME</label></td>
+            <td><input type="text" id="mother_surname" name="mother_surname"></td>
+            <td colspan="2" style="border: none;"></td>
+        </tr>
+        <tr>
+            <td><label for="mother_firstname">FIRST NAME</label></td>
+            <td><input type="text" id="mother_firstname" name="mother_firstname"></td>
+            <td colspan="2" style="border: none;"></td>
+        </tr>
+        <tr>
+            <td><label for="mother_middlename">MIDDLE NAME</label></td>
+            <td><input type="text" id="mother_middlename" name="mother_middlename"></td>
+            <td colspan="2" style="border: none;"></td>
+        </tr>
+
+        <tr>
+            <th colspan="4" class="section-header">III. EDUCATIONAL BACKGROUND</th>
+        </tr>
+        <tr>
+            <td colspan="4" style="padding: 0;">
+                <table style="margin-bottom: 0; border: none;">
+                    <tr>
+                        <th rowspan="2" style="border-top: none; border-left: none;">26. LEVEL</th>
+                        <th rowspan="2" style="border-top: none;"><label>NAME OF SCHOOL</label><br>(Write in full)</th>
+                        <th rowspan="2" style="border-top: none;"><label>BASIC EDUCATION/DEGREE</label><br>(Write in full)</th>
+                        <th colspan="2" style="border-top: none;">PERIOD OF ATTENDANCE (yyyy)</th>
+                        <th rowspan="2" style="border-top: none;">HIGHEST LEVEL/UNITS EARNED</th>
+                        <th rowspan="2" style="border-top: none;">YEAR GRADUATED</th>
+                        <th rowspan="2" style="border-top: none; border-right: none;">SCHOLARSHIP/ HONORS</th>
+                    </tr>
+                    <tr>
+                        <th>From</th>
+                        <th>To</th>
+                    </tr>
+                    <tr>
+                        <td style="border-left: none;">ELEMENTARY</td>
+                        <td><input type="text" name="elem_school"></td>
+                        <td><input type="text" name="elem_degree"></td>
+                        <td><input type="number" name="elem_from" min="1900" max="2099"></td>
+                        <td><input type="number" name="elem_to" min="1900" max="2099"></td>
+                        <td><input type="text" name="elem_units"></td>
+                        <td><input type="number" name="elem_grad" min="1900" max="2099"></td>
+                        <td style="border-right: none;"><input type="text" name="elem_honors"></td>
+                    </tr>
+                    <tr>
+                        <td style="border-left: none;">SECONDARY</td>
+                        <td><input type="text" name="sec_school"></td>
+                        <td><input type="text" name="sec_degree"></td>
+                        <td><input type="number" name="sec_from" min="1900" max="2099"></td>
+                        <td><input type="number" name="sec_to" min="1900" max="2099"></td>
+                        <td><input type="text" name="sec_units"></td>
+                        <td><input type="number" name="sec_grad" min="1900" max="2099"></td>
+                        <td style="border-right: none;"><input type="text" name="sec_honors"></td>
+                    </tr>
+                    <tr>
+                        <td style="border-left: none;">VOCATIONAL</td>
+                        <td><input type="text" name="voc_school"></td>
+                        <td><input type="text" name="voc_degree"></td>
+                        <td><input type="number" name="voc_from" min="1900" max="2099"></td>
+                        <td><input type="number" name="voc_to" min="1900" max="2099"></td>
+                        <td><input type="text" name="voc_units"></td>
+                        <td><input type="number" name="voc_grad" min="1900" max="2099"></td>
+                        <td style="border-right: none;"><input type="text" name="voc_honors"></td>
+                    </tr>
+                    <tr>
+                        <td style="border-left: none;">COLLEGE</td>
+                        <td><input type="text" name="coll_school"></td>
+                        <td><input type="text" name="coll_degree"></td>
+                        <td><input type="number" name="coll_from" min="1900" max="2099"></td>
+                        <td><input type="number" name="coll_to" min="1900" max="2099"></td>
+                        <td><input type="text" name="coll_units"></td>
+                        <td><input type="number" name="coll_grad" min="1900" max="2099"></td>
+                        <td style="border-right: none;"><input type="text" name="coll_honors"></td>
+                    </tr>
+                    <tr>
+                        <td style="border-left: none; border-bottom: none;">GRADUATE STUDIES</td>
+                        <td style="border-bottom: none;"><input type="text" name="grad_school"></td>
+                        <td style="border-bottom: none;"><input type="text" name="grad_degree"></td>
+                        <td style="border-bottom: none;"><input type="number" name="grad_from" min="1900" max="2099"></td>
+                        <td style="border-bottom: none;"><input type="number" name="grad_to" min="1900" max="2099"></td>
+                        <td style="border-bottom: none;"><input type="text" name="grad_units"></td>
+                        <td style="border-bottom: none;"><input type="number" name="grad_grad" min="1900" max="2099"></td>
+                        <td style="border-right: none; border-bottom: none;"><input type="text" name="grad_honors"></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+
+        <tr>
+            <td colspan="2" style="border: none; padding-top: 20px;">
+                <label for="signature"><b>SIGNATURE</b> (e-signature/digital certificate):</label>
+                <input type="file" id="signature" name="signature">
+            </td>
+            <td colspan="2" style="border: none; padding-top: 20px; text-align: right;">
+                <label for="pds_date"><b>DATE:</b></label>
+                <input type="date" id="pds_date" name="pds_date">
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>
